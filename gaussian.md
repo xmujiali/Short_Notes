@@ -40,8 +40,18 @@ scf=(yqc)
 关闭对称性可以使用`symm=None`
 
 ## opt
+opt关键字除可以寻找能量极小点之外，还可以寻找过渡态、鞍点等。目前我们暂时只关注能量极小点。
+
+```
+控制优化的精度,但是需要配合其它设置才有意义。
+opt=verytight
+opt=tight
+opt=loose
 
 
+opt=restart
+opt=
+```
 
 
 
