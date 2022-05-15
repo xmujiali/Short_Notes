@@ -41,19 +41,19 @@ scf=(yqc)
 
 ## opt
 opt关键字除可以寻找能量极小点之外，还可以寻找过渡态、鞍点等。目前我们暂时只关注能量极小点。
-
 ```
 控制优化的精度,但是需要配合其它设置才有意义。
-opt=verytight
+opt=veryTight
 opt=tight
 opt=loose
 
-
+重启优化
 opt=restart
-opt=
 ```
-
-
+opt的一个重要内容是限制性优化。可以参考：
+http://bbs.keinsci.com/thread-9022-1-1.html
+此外Gaussian 16中还提供了Generalized Internal Coordinate (GIC)，不会用。
+另外，补充一个水分子的例子。
 
 
 
@@ -66,4 +66,6 @@ frequency 几个主要作用：
 
 
 ## NLO(Non-Linear Optics)，关键字是polar
-
+MultiWFN是一个波函数分析软件，可以方便地帮助我们读取非线性光学系数。
+http://sobereva.com/multiwfn/
+http://sobereva.com/231
