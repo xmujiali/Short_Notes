@@ -39,29 +39,84 @@ scf=(yqc)
 放松对称性判断的标准，可以使用`symm=(loose) `,推荐用GV更方便
 关闭对称性可以使用`symm=None`
 
-## opt
-opt关键字除可以寻找能量极小点之外，还可以寻找过渡态、鞍点等。目前我们暂时只关注能量极小点。
+## 几何优化
+几何优化的目的在于寻找势能面上的极小点。还可以用来搜索1级的鞍点（过渡态TS），高级鞍点。目前，我们只关心极小点。
+
 ```
-控制优化的精度,但是需要配合其它设置才有意义。
-opt=veryTight
-opt=tight
-opt=loose
+ Variable       Old X    -DE/DX   Delta X   Delta X   Delta X     New X
+                                 (Linear)    (Quad)   (Total)
+    R1        2.94797  -0.37366   0.00000  -0.30000  -0.30000   2.64797
+         Item               Value     Threshold  Converged?
+ Maximum Force            0.373659     0.000450     NO
+ RMS     Force            0.373659     0.000300     NO
+ Maximum Displacement     0.150000     0.001800     NO
+ RMS     Displacement     0.212132     0.001200     NO
+ Predicted change in Energy=-1.000297D-01
+ Lowest energy point so far.  Saving SCF results.
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+
+
+ Variable       Old X    -DE/DX   Delta X   Delta X   Delta X     New X
+                                 (Linear)    (Quad)   (Total)
+    R1        2.04630  -0.00006  -0.00003   0.00000  -0.00003   2.04626
+         Item               Value     Threshold  Converged?
+ Maximum Force            0.000062     0.000450     YES
+ RMS     Force            0.000062     0.000300     YES
+ Maximum Displacement     0.000017     0.001800     YES
+ RMS     Displacement     0.000024     0.001200     YES
+ Predicted change in Energy=-1.022867D-09
+ Optimization completed.
+    -- Stationary point found.
+
+```
+
+```
+控制优化的收敛精度,必须要配合其他的设置如SCF，Int等
+opt=VeryTight
+opt=Tight
+opt=Loose
+
+opt=(MaxCycles=N) 作opt的次数
+opt=(MaxStep=N)
+控制opt时改变结构的最大长度或角度，单位是0.01N Bohr or radians，默认的N为30。在09之前，此方案是无效的，此前是直接使用IOP去控制,参考
+http://sobereva.com/93
+???
 
 重启优化
 opt=restart
 ```
+
 opt的一个重要内容是限制性优化。可以参考：
 http://bbs.keinsci.com/thread-9022-1-1.html
 此外Gaussian 16中还提供了Generalized Internal Coordinate (GIC)，不会用。
 另外，补充一个水分子的例子。
+```
+%chk=test.chk
+%mem=2000MB
+#p hf/3-21G opt=z-matrix
 
+test
+
+0       1
+O
+H       1       B1
+H       1       B2      2 A
+Variables:
+        B1=0.9
+        B2=1.1
+Constants:
+        A=100.0
+```
+【练习】利用这个方案，绘制一个H2O的HF能量～B1的图，对比B1很大的时候，分子HF能量与E(OH)+E(H)是否相同？
 
 
 
 ## freq
 frequency 几个主要作用：
 - 检验优化的结构是否是local minimum。因此必须要在opt成功的结构上，采用相同的方法/基组进行frequency计算。
-- 给出振动频率，进而获得预测的红外/拉曼光谱。
+【练习】构造一个乙烷的重叠式构象，优化并计算频率，就会发现虚频。
+- 给出振动频率，进而获得预测的红外/拉曼光谱(freq=Raman)。
 - 利用统计热力学给出相关的热力学量，如$S, C_V, \Delta H,\Delta G$等等。
 
 
@@ -69,5 +124,3 @@ frequency 几个主要作用：
 MultiWFN是一个波函数分析软件，可以方便地帮助我们读取非线性光学系数。
 http://sobereva.com/multiwfn/
 http://sobereva.com/231
-
-
