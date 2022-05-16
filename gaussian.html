@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:///c:\Users\admin\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.2\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      <link rel="stylesheet" href="file:////home/jli/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.6.3/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
       
       
       
@@ -271,7 +271,7 @@ pre[data-line] .line-highlight[data-end]:after {
 <p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5728;&#x6700;&#x540E;&#x52A0;&#x4E0A;&amp;&#xFF0C;&#x4EFB;&#x52A1;&#x5C06;&#x5728;&#x5F53;&#x524D;shell&#x4E2D;&#x8FD0;&#x884C;&#xFF0C;&#x4F60;&#x53EA;&#x80FD;&#x7B49;&#x5F85;&#x4EFB;&#x52A1;&#x7ED3;&#x675F;&#x624D;&#x80FD;&#x8FDB;&#x884C;&#x5176;&#x5B83;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x4E14;&#x6B64;&#x65F6;&#x65AD;&#x7EBF;&#x6216;&#x8005;&#x9000;&#x51FA;&#x90FD;&#x4F1A;&#x76F4;&#x63A5;&#x4E2D;&#x65AD;&#x4EFB;&#x52A1;&#xFF01;&#xFF01;&#xFF01;&#x6240;&#x4EE5;&#xFF0C;&#x6B63;&#x5F0F;&#x7684;&#x8BA1;&#x7B97;&#x52A1;&#x5FC5;&#x4F7F;&#x7528;&amp;&#xFF0C;&#x8BA9;&#x4EFB;&#x52A1;&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#x3002;&#x5982;&#x679C;&#x8981;&#x67E5;&#x770B;&#x4EFB;&#x52A1;&#x60C5;&#x51B5;&#x8BF7;&#x4F7F;&#x7528; ps&#x6216;top&#x3002;</p>
 <h1>&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x4E2D;&#x4E00;&#x5B9A;&#x8981;&#x5199;check&#x6587;&#x4EF6;</h1>
 <p>&#x4F7F;&#x7528;checkpoint&#x6587;&#x4EF6;&#x7684;&#x6700;&#x5927;&#x4F18;&#x70B9;&#x662F;&#x53EF;&#x4EE5;&#x4ECE;&#x67D0;&#x4E2A;&#x4E2D;&#x95F4;&#x7ED3;&#x679C;&#x7EE7;&#x7EED;&#x8BA1;&#x7B97;&#xFF0C;&#x800C;&#x4E0D;&#x5FC5;&#x4ECE;&#x5934;&#x5F00;&#x59CB;&#x3002;<br>
-&#x52A0;&#x5165;&#x4F60;&#x5DF2;&#x7ECF;&#x8FDB;&#x884C;&#x4E86;CO2&#x7684;HF&#x8BA1;&#x7B97;&#xFF0C;&#x5E0C;&#x671B;&#x8FDB;&#x884C;MP2&#x7684;&#x8BA1;&#x7B97;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x505A;(&#x5047;&#x5B9A;test_CO2.chk&#x662F;HF&#x8BA1;&#x7B97;&#x7684;chk&#x6587;&#x4EF6;)</p>
+&#x5047;&#x5982;&#x4F60;&#x5DF2;&#x7ECF;&#x8FDB;&#x884C;&#x4E86;CO2&#x7684;HF&#x8BA1;&#x7B97;&#xFF0C;&#x5E0C;&#x671B;&#x8FDB;&#x884C;MP2&#x7684;&#x8BA1;&#x7B97;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x505A;(&#x5047;&#x5B9A;test_CO2.chk&#x662F;HF&#x8BA1;&#x7B97;&#x7684;chk&#x6587;&#x4EF6;)</p>
 <pre data-role="codeBlock" data-info class="language-"><code>%oldchk=test_CO2.chk
 %chk=test_CO2_MP2.chk
 # P MP2/6-31+G* geometry=check guess=read
@@ -281,7 +281,6 @@ pre[data-line] .line-highlight[data-end]:after {
 CO2
 
 0       1
-
 </code></pre><h2>&#x5355;&#x70B9;&#x80FD;&#x8BA1;&#x7B97;SP(&#x53EF;&#x4EE5;&#x4E0D;&#x5199;SP)</h2>
 <p>&#x5355;&#x70B9;&#x80FD;/SCF&#x8BA1;&#x7B97;&#x662F;&#x4E00;&#x5207;&#x91CF;&#x5316;&#x8BA1;&#x7B97;&#x7684;&#x57FA;&#x7840;&#xFF0C;&#x5176;&#x76EE;&#x7684;&#x5728;&#x4E8E;&#x83B7;&#x5F97;&#x7ED9;&#x5B9A;&#x51E0;&#x4F55;&#x7ED3;&#x6784;&#x4E0B;&#x7684;&#x6CE2;&#x51FD;&#x6570;&#x3002;<br>
 &#x4E00;&#x4E0B;&#x662F;&#x4E00;&#x4E9B;&#x4F60;&#x6700;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x7684;&#x5185;&#x5BB9;&#xFF1A;<br>
@@ -291,24 +290,88 @@ CO2
 <code>scf=tight &#x6216;&#x8005; scf=(loose)</code><br>
 MaxCycle&#x7ED9;&#x51FA;SCF&#x8FED;&#x4EE3;&#x6B21;&#x6570;&#x7684;&#x4E0A;&#x9650;&#xFF0C;&#x8D85;&#x8FC7;&#x4F1A;&#x76F4;&#x63A5;&#x505C;&#x6B62;&#x3002;<br>
 <code>scf=(tight,MaxCycle=512)</code><br>
-qc,xqc,yqc&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x8FED;&#x4EE3;&#x7B97;&#x6CD5;&#xFF0C;&#x5BF9;&#x4E8E;&#x7279;&#x522B;&#x96BE;&#x6536;&#x655B;&#x7684;&#x4F53;&#x7CFB;&#x624D;&#x9700;&#x8981;&#x8003;&#x8651;&#x91C7;&#x7528;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x5927;&#x5927;&#x589E;&#x52A0;SCF&#x8BA1;&#x7B97;&#x6240;&#x8017;&#x8D39;&#x7684;&#x65F6;&#x95F4;</p>
+qc, xqc, yqc&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x8FED;&#x4EE3;&#x7B97;&#x6CD5;&#xFF0C;&#x5BF9;&#x4E8E;&#x7279;&#x522B;&#x96BE;&#x6536;&#x655B;&#x7684;&#x4F53;&#x7CFB;&#x624D;&#x9700;&#x8981;&#x8003;&#x8651;&#x91C7;&#x7528;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x5927;&#x5927;&#x589E;&#x52A0;SCF&#x8BA1;&#x7B97;&#x6240;&#x8017;&#x8D39;&#x7684;&#x65F6;&#x95F4;</p>
 <pre data-role="codeBlock" data-info class="language-"><code>scf=(qc)
 scf=(xqc)
 scf=(yqc)
-</code></pre><p>&#x653E;&#x677E;&#x5BF9;&#x79F0;&#x6027;&#x5224;&#x65AD;&#x7684;&#x6807;&#x51C6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>symm=(loose)</code>,&#x63A8;&#x8350;&#x7528;GV&#x66F4;&#x65B9;&#x4FBF;</p>
-<p>&#x5173;&#x95ED;&#x5BF9;&#x79F0;&#x6027;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>symm=None</code></p>
-<h2 class="mume-header" id="opt">opt</h2>
+</code></pre><p>&#x653E;&#x677E;&#x5BF9;&#x79F0;&#x6027;&#x5224;&#x65AD;&#x7684;&#x6807;&#x51C6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>symm=(loose)</code>,&#x63A8;&#x8350;&#x7528;GV&#x66F4;&#x65B9;&#x4FBF;<br>
+&#x5173;&#x95ED;&#x5BF9;&#x79F0;&#x6027;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>symm=None</code></p>
+<h2 class="mume-header" id="%E5%87%A0%E4%BD%95%E4%BC%98%E5%8C%96">&#x51E0;&#x4F55;&#x4F18;&#x5316;</h2>
 
+<p>&#x51E0;&#x4F55;&#x4F18;&#x5316;&#x7684;&#x76EE;&#x7684;&#x5728;&#x4E8E;&#x5BFB;&#x627E;&#x52BF;&#x80FD;&#x9762;&#x4E0A;&#x7684;&#x6781;&#x5C0F;&#x70B9;&#x3002;&#x8FD8;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x641C;&#x7D22;1&#x7EA7;&#x7684;&#x978D;&#x70B9;&#xFF08;&#x8FC7;&#x6E21;&#x6001;TS&#xFF09;&#xFF0C;&#x9AD8;&#x7EA7;&#x978D;&#x70B9;&#x3002;&#x76EE;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x5173;&#x5FC3;&#x6781;&#x5C0F;&#x70B9;&#x3002;</p>
+<pre data-role="codeBlock" data-info class="language-"><code> Variable       Old X    -DE/DX   Delta X   Delta X   Delta X     New X
+                                 (Linear)    (Quad)   (Total)
+    R1        2.94797  -0.37366   0.00000  -0.30000  -0.30000   2.64797
+         Item               Value     Threshold  Converged?
+ Maximum Force            0.373659     0.000450     NO
+ RMS     Force            0.373659     0.000300     NO
+ Maximum Displacement     0.150000     0.001800     NO
+ RMS     Displacement     0.212132     0.001200     NO
+ Predicted change in Energy=-1.000297D-01
+ Lowest energy point so far.  Saving SCF results.
+ GradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGradGrad
+
+
+
+ Variable       Old X    -DE/DX   Delta X   Delta X   Delta X     New X
+                                 (Linear)    (Quad)   (Total)
+    R1        2.04630  -0.00006  -0.00003   0.00000  -0.00003   2.04626
+         Item               Value     Threshold  Converged?
+ Maximum Force            0.000062     0.000450     YES
+ RMS     Force            0.000062     0.000300     YES
+ Maximum Displacement     0.000017     0.001800     YES
+ RMS     Displacement     0.000024     0.001200     YES
+ Predicted change in Energy=-1.022867D-09
+ Optimization completed.
+    -- Stationary point found.
+
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code>&#x63A7;&#x5236;&#x4F18;&#x5316;&#x7684;&#x6536;&#x655B;&#x7CBE;&#x5EA6;,&#x5FC5;&#x987B;&#x8981;&#x914D;&#x5408;&#x5176;&#x4ED6;&#x7684;&#x8BBE;&#x7F6E;&#x5982;SCF&#xFF0C;Int&#x7B49;
+opt=VeryTight
+opt=Tight
+opt=Loose
+
+opt=(MaxCycles=N) &#x4F5C;opt&#x7684;&#x6B21;&#x6570;
+opt=(MaxStep=N)
+&#x63A7;&#x5236;opt&#x65F6;&#x6539;&#x53D8;&#x7ED3;&#x6784;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x6216;&#x89D2;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x662F;0.01N Bohr or radians&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;N&#x4E3A;30&#x3002;&#x5728;09&#x4E4B;&#x524D;&#xFF0C;&#x6B64;&#x65B9;&#x6848;&#x662F;&#x65E0;&#x6548;&#x7684;&#xFF0C;&#x6B64;&#x524D;&#x662F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;IOP&#x53BB;&#x63A7;&#x5236;,&#x53C2;&#x8003;
+http://sobereva.com/93
+???
+
+&#x91CD;&#x542F;&#x4F18;&#x5316;
+opt=restart
+</code></pre><p>opt&#x7684;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x5185;&#x5BB9;&#x662F;&#x9650;&#x5236;&#x6027;&#x4F18;&#x5316;&#x3002;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#xFF1A;<br>
+<a href="http://bbs.keinsci.com/thread-9022-1-1.html">http://bbs.keinsci.com/thread-9022-1-1.html</a></p>
+<p>&#x6B64;&#x5916;Gaussian 16&#x4E2D;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;Generalized Internal Coordinate (GIC)&#xFF0C;&#x4E0D;&#x4F1A;&#x7528;&#x3002;<br>
+&#x53E6;&#x5916;&#xFF0C;&#x8865;&#x5145;&#x4E00;&#x4E2A;&#x6C34;&#x5206;&#x5B50;&#x7684;&#x4F8B;&#x5B50;&#x3002;</p>
+<pre data-role="codeBlock" data-info class="language-"><code>%chk=test.chk
+%mem=2000MB
+#p hf/3-21G opt=z-matrix
+
+test
+
+0       1
+O
+H       1       B1
+H       1       B2      2 A
+Variables:
+        B1=0.9
+        B2=1.1
+Constants:
+        A=100.0
+</code></pre><p>&#x3010;&#x7EC3;&#x4E60;&#x3011;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6848;&#xFF0C;&#x7ED8;&#x5236;&#x4E00;&#x4E2A;H2O&#x7684;HF&#x80FD;&#x91CF;&#xFF5E;B1&#x7684;&#x56FE;&#xFF0C;&#x5BF9;&#x6BD4;B1&#x5F88;&#x5927;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5206;&#x5B50;HF&#x80FD;&#x91CF;&#x4E0E;E(OH)+E(H)&#x662F;&#x5426;&#x76F8;&#x540C;&#xFF1F;</p>
 <h2 class="mume-header" id="freq">freq</h2>
 
 <p>frequency &#x51E0;&#x4E2A;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#xFF1A;</p>
 <ul>
-<li>&#x68C0;&#x9A8C;&#x4F18;&#x5316;&#x7684;&#x7ED3;&#x6784;&#x662F;&#x5426;&#x662F;local minimum&#x3002;&#x56E0;&#x6B64;&#x5FC5;&#x987B;&#x8981;&#x5728;opt&#x6210;&#x529F;&#x7684;&#x7ED3;&#x6784;&#x4E0A;&#xFF0C;&#x91C7;&#x7528;&#x76F8;&#x540C;&#x7684;&#x65B9;&#x6CD5;/&#x57FA;&#x7EC4;&#x8FDB;&#x884C;frequency&#x8BA1;&#x7B97;&#x3002;</li>
-<li>&#x7ED9;&#x51FA;&#x632F;&#x52A8;&#x9891;&#x7387;&#xFF0C;&#x8FDB;&#x800C;&#x83B7;&#x5F97;&#x9884;&#x6D4B;&#x7684;&#x7EA2;&#x5916;/&#x62C9;&#x66FC;&#x5149;&#x8C31;&#x3002;</li>
+<li>&#x68C0;&#x9A8C;&#x4F18;&#x5316;&#x7684;&#x7ED3;&#x6784;&#x662F;&#x5426;&#x662F;local minimum&#x3002;&#x56E0;&#x6B64;&#x5FC5;&#x987B;&#x8981;&#x5728;opt&#x6210;&#x529F;&#x7684;&#x7ED3;&#x6784;&#x4E0A;&#xFF0C;&#x91C7;&#x7528;&#x76F8;&#x540C;&#x7684;&#x65B9;&#x6CD5;/&#x57FA;&#x7EC4;&#x8FDB;&#x884C;frequency&#x8BA1;&#x7B97;&#x3002;<br>
+&#x3010;&#x7EC3;&#x4E60;&#x3011;&#x6784;&#x9020;&#x4E00;&#x4E2A;&#x4E59;&#x70F7;&#x7684;&#x91CD;&#x53E0;&#x5F0F;&#x6784;&#x8C61;&#xFF0C;&#x4F18;&#x5316;&#x5E76;&#x8BA1;&#x7B97;&#x9891;&#x7387;&#xFF0C;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#x865A;&#x9891;&#x3002;</li>
+<li>&#x7ED9;&#x51FA;&#x632F;&#x52A8;&#x9891;&#x7387;&#xFF0C;&#x8FDB;&#x800C;&#x83B7;&#x5F97;&#x9884;&#x6D4B;&#x7684;&#x7EA2;&#x5916;/&#x62C9;&#x66FC;&#x5149;&#x8C31;(freq=Raman)&#x3002;</li>
 <li>&#x5229;&#x7528;&#x7EDF;&#x8BA1;&#x70ED;&#x529B;&#x5B66;&#x7ED9;&#x51FA;&#x76F8;&#x5173;&#x7684;&#x70ED;&#x529B;&#x5B66;&#x91CF;&#xFF0C;&#x5982;<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo separator="true">,</mo><msub><mi>C</mi><mi>V</mi></msub><mo separator="true">,</mo><mi mathvariant="normal">&#x394;</mi><mi>H</mi><mo separator="true">,</mo><mi mathvariant="normal">&#x394;</mi><mi>G</mi></mrow><annotation encoding="application/x-tex">S, C_V, \Delta H,\Delta G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">S</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3283em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.22222em;">V</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">&#x394;</span><span class="mord mathnormal" style="margin-right:0.08125em;">H</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord">&#x394;</span><span class="mord mathnormal">G</span></span></span></span>&#x7B49;&#x7B49;&#x3002;</li>
 </ul>
 <h2 class="mume-header" id="nlonon-linear-optics%E5%85%B3%E9%94%AE%E5%AD%97%E6%98%AFpolar">NLO(Non-Linear Optics)&#xFF0C;&#x5173;&#x952E;&#x5B57;&#x662F;polar</h2>
 
+<p>MultiWFN&#x662F;&#x4E00;&#x4E2A;&#x6CE2;&#x51FD;&#x6570;&#x5206;&#x6790;&#x8F6F;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x5730;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x8BFB;&#x53D6;&#x975E;&#x7EBF;&#x6027;&#x5149;&#x5B66;&#x7CFB;&#x6570;&#x3002;<br>
+<a href="http://sobereva.com/multiwfn/">http://sobereva.com/multiwfn/</a></p>
+<p><a href="http://sobereva.com/231">http://sobereva.com/231</a></p>
 
       </div>
       

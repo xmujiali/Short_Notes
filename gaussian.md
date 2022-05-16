@@ -89,6 +89,7 @@ opt=restart
 
 opt的一个重要内容是限制性优化。可以参考：
 http://bbs.keinsci.com/thread-9022-1-1.html
+
 此外Gaussian 16中还提供了Generalized Internal Coordinate (GIC)，不会用。
 另外，补充一个水分子的例子。
 ```
@@ -123,4 +124,5 @@ frequency 几个主要作用：
 ## NLO(Non-Linear Optics)，关键字是polar
 MultiWFN是一个波函数分析软件，可以方便地帮助我们读取非线性光学系数。
 http://sobereva.com/multiwfn/
+
 http://sobereva.com/231
