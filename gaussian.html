@@ -357,8 +357,80 @@ Variables:
         B2=1.1
 Constants:
         A=100.0
-</code></pre><p>&#x3010;&#x7EC3;&#x4E60;&#x3011;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6848;&#xFF0C;&#x7ED8;&#x5236;&#x4E00;&#x4E2A;H2O&#x7684;HF&#x80FD;&#x91CF;&#xFF5E;B1&#x7684;&#x56FE;&#xFF0C;&#x5BF9;&#x6BD4;B1&#x5F88;&#x5927;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5206;&#x5B50;HF&#x80FD;&#x91CF;&#x4E0E;E(OH)+E(H)&#x662F;&#x5426;&#x76F8;&#x540C;&#xFF1F;</p>
-<h2 class="mume-header" id="freq">freq</h2>
+</code></pre><p>&#x3010;&#x7EC3;&#x4E60;&#x3011;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6848;&#xFF0C;&#x7ED8;&#x5236;&#x4E00;&#x4E2A;H2O&#x7684;HF&#x80FD;&#x91CF;&#xFF5E;B1&#x7684;&#x56FE;&#xFF0C;&#x5BF9;&#x6BD4;B1&#x5F88;&#x5927;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5206;&#x5B50;HF&#x80FD;&#x91CF;&#x4E0E;E(OH)+E(H)&#x662F;&#x5426;&#x76F8;&#x540C;&#xFF1F;<br>
+&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info class="language-"><code>%chk=h.chk
+%mem=2000MB
+%CPU=4
+#p hf/3-21G 
+
+h
+
+0       2
+H
+
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code>%chk=oh.chk
+%mem=2000MB
+%CPU=4
+#p hf/3-21G opt
+
+h
+
+0       2
+O
+H       1       1.0
+
+</code></pre><pre data-role="codeBlock" data-info class="language-"><code>%chk=h2o.chk
+%mem=2000MB
+%CPU=4
+#p hf/3-21G opt=z-matrix  guess=read
+
+test
+
+0       1
+O
+H       1       B1
+H       1       B2      2 A
+Variables:
+        A=100.0
+        B2=1.1
+Constants:
+        B1=0.9
+</code></pre><p>&#x4FEE;&#x6539;&#x6700;&#x540E;&#x7684;Constants&#x4E2D;B1&#x7684;&#x503C;&#xFF0C;&#x5373;&#x53EF;&#x5B9E;&#x73B0;&#x5BF9;&#x7B2C;&#x4E00;&#x4E2A;O-H&#x952E;&#x957F;&#x7684;&#x67D4;&#x6027;&#x626B;&#x63CF;&#xFF08;&#x533A;&#x5206;&#x67D4;&#x6027;&#x626B;&#x63CF;&#x4E0E;&#x521A;&#x6027;&#x626B;&#x63CF;&#xFF01;&#xFF09;&#x3002;&#x4ECE;&#x4E0B;&#x9762;&#x7684;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;HF/3-21G&#x786E;&#x5B9E;&#x53EF;&#x4EE5;&#x63CF;&#x8FF0;&#x5728;0.9x&#x57C3;&#x9644;&#x8FD1;&#x7684;&#x80FD;&#x91CF;&#x6700;&#x4F4E;&#x70B9;&#xFF0C;&#x4F46;&#x662F;&#x5176;&#x5BF9;&#x89E3;&#x79BB;&#x884C;&#x4E3A;&#x7684;&#x63CF;&#x8FF0;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF01;&#x539F;&#x56E0;&#x5728;&#x4E8E;B1&#x5F88;&#x5927;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5316;&#x5B66;&#x4E0A;&#x5E94;&#x8BE5;&#x5C06;&#x8BE5;&#x4F53;&#x7CFB;&#x89C6;&#x4E3A;&#x4E00;&#x4E2A;H&#x539F;&#x5B50;&#x548C;&#x4E00;&#x4E2A;OH&#x81EA;&#x7531;&#x57FA;&#xFF0C;&#x4F46;&#x662F;HF&#xFF08;UHF&#x4E5F;&#x6CA1;&#x6C42;&#xFF09;&#x8981;&#x6C42;&#x7535;&#x5B50;&#x914D;&#x5BF9;&#xFF0C;&#x4F7F;&#x5F97;&#x5B9E;&#x9645;&#x4E0A;&#x63CF;&#x8FF0;&#x7684;&#x662F;&#x4E00;&#x4E2A;H+&#x548C;&#x4E00;&#x4E2A;OH-&#xFF0C;&#x8FD9;&#x662F;&#x9519;&#x8BEF;&#x7684;&#x3002;<br>
+&#x53EF;&#x4EE5;&#x4F7F;&#x7528;guess=mix&#x6765;&#x7834;&#x574F;alpha&#x548C;beta&#x7535;&#x5B50;&#x8F68;&#x9053;&#x7684;&#x5BF9;&#x79F0;&#x6027;&#xFF0C;&#x6784;&#x9020;&#x51FA;alpha&#x7535;&#x5B50;&#x5728;H&#x4E0A;&#xFF0C;beta&#x7535;&#x5B50;&#x5728;OH&#x4E0A;&#x7684;&#x6CE2;&#x51FD;&#x6570;&#xFF0C;&#x7ACB;&#x5373;&#x5C31;&#x80FD;&#x89E3;&#x51B3;&#x8FD9;&#x4E00;&#x95EE;&#x9898;&#x3002;</p>
+<pre data-role="codeBlock" data-info class="language-"><code>                  HF/3-21G
+E(H)=           -0.496198636018
+E(OH)=          -74.9702282708
+E(H)+ E(OH)=    -75.466426906818
+	
+B1                E(HF/3-21)
+0.5             -74.7995664071
+0.6             -75.2431743965
+0.7             -75.4525630025
+0.8             -75.5464264096
+0.9             -75.5810437519
+1.0             -75.5849818205
+1.1             -75.5732362682
+1.2             -75.5536084412
+1.4             -75.5052553503
+1.6             -75.4555725268
+1.8             -75.4097320289
+2.0             -75.3690417627
+2.5             -75.2890867806
+3.0             -75.2356074388
+3.5             -75.2032240825
+4.0             -75.1852939483
+5.0             -75.1684056051
+6.0             -75.1592141297
+7.0             -75.152785143
+8.0             -75.1479867191
+9.0             -75.144265932
+10.0            -75.1412956315
+20.0            -75.1279839048
+50.0            -75.1200258437
+100.0           -75.117375752
+100.0           -75.4664269288 (guess=mix)
+</code></pre><h2 class="mume-header" id="freq">freq</h2>
 
 <p>frequency &#x51E0;&#x4E2A;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#xFF1A;</p>
 <ul>
@@ -372,6 +444,7 @@ Constants:
 <p>MultiWFN&#x662F;&#x4E00;&#x4E2A;&#x6CE2;&#x51FD;&#x6570;&#x5206;&#x6790;&#x8F6F;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x5730;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x8BFB;&#x53D6;&#x975E;&#x7EBF;&#x6027;&#x5149;&#x5B66;&#x7CFB;&#x6570;&#x3002;<br>
 <a href="http://sobereva.com/multiwfn/">http://sobereva.com/multiwfn/</a></p>
 <p><a href="http://sobereva.com/231">http://sobereva.com/231</a></p>
+<p>&#x3010;&#x8054;&#x7CFB;&#x3011;&#x719F;&#x6089;MultiWFN&#x7684;&#x64CD;&#x4F5C;&#xFF1B;&#x4F7F;&#x7528;Excel&#x8868;&#x683C;&#x5B9E;&#x73B0;MultiWFN&#x7684;&#x8BA1;&#x7B97;&#xFF08;&#x6CE8;&#x610F;&#xFF0C;Gaussian&#x7ED9;&#x51FA;&#x7684;&#x662F;input orientation&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x800C;MultiWFN&#x7ED9;&#x51FA;&#x7684;standard orientation&#x7684;&#x7ED3;&#x679C;&#xFF0C;&#x8FD9;&#x5C06;&#x5BFC;&#x81F4;&#x67D0;&#x4E9B;&#x4E0E;&#x53D6;&#x5411;&#x76F8;&#x5173;&#x7684;&#x7ED3;&#x679C;&#x4F1A;&#x4E0D;&#x4E00;&#x81F4;&#xFF01;</p>
 
       </div>
       
