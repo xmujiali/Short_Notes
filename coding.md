@@ -60,7 +60,7 @@ with open('abc.csv','w') as file:
         file.write(line + '\n')
 ```
 
-打开h2o.log，确认其中有
+【例题】打开h2o.log，确认其中有
 ```
     -- Stationary point found.
 ```
@@ -70,6 +70,7 @@ with open('abc.csv','w') as file:
 ```
 提取其中的能量。
 
+解决方案的代码如下：
 ```
 with open('h2o.log','r') as file:
     FAIL = True
