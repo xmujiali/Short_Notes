@@ -27,3 +27,65 @@ $$ x_{n+1} = x_n - f(x_n)/f'(x_n) $$
   - 增加退出
 - 再思考一下这套方法还能修改一下，来处理更加复杂的情形吗？
 
+# 打开文件
+-1. open
+-2. read/readline/readlines/write/writeline/writelines
+-3. close
+
+```
+# 打开文件
+# r read
+# w write
+# a append
+file = open('abc.csv','w')
+# 读取文件
+file.write(',1,2,3,4,5,6,7,8,9\n')
+for i in range(1,10):
+    line = str(i)+','
+    for j in range(1,10):
+        line += str(i*j) + ','
+    file.write(line + '\n')
+# 关闭文件
+file.close()
+```
+偷懒并且推荐的办法：
+```
+with open('abc.csv','w') as file:
+    # 读取文件
+    file.write(',1,2,3,4,5,6,7,8,9\n')
+    for i in range(1,10):
+        line = str(i)+','
+        for j in range(1,10):
+            line += str(i*j) + ','
+        file.write(line + '\n')
+```
+
+打开h2o.log，确认其中有
+```
+    -- Stationary point found.
+```
+这一行，然后再在全文中找到最后一个SCF Done所在的行
+```
+ SCF Done:  E(UHF) =  -75.4664269288     A.U. after    8 cycles
+```
+提取其中的能量。
+
+```
+with open('h2o.log','r') as file:
+    FAIL = True
+    contents = file.readlines()
+    for line in contents:
+       if line == '    -- Stationary point found.\n':
+           FAIL = False
+    
+    if False == FAIL:
+        result = None
+        for line in contents:
+            text = line[0:10]
+            if text == ' SCF Done:':
+                result = line
+    
+    if result:
+        result = result.split()
+        print(result[4])
+```
